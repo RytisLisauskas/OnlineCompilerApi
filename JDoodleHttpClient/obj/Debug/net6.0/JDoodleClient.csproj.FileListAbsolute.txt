@@ -1,0 +1,12 @@
+C:\Users\IT\Documents\c#\JDoodleHttpClient\bin\Debug\net6.0\JDoodleClient.deps.json
+C:\Users\IT\Documents\c#\JDoodleHttpClient\bin\Debug\net6.0\JDoodleClient.dll
+C:\Users\IT\Documents\c#\JDoodleHttpClient\bin\Debug\net6.0\JDoodleClient.pdb
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\JDoodleClient.csproj.AssemblyReference.cache
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\JDoodleClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\JDoodleClient.AssemblyInfoInputs.cache
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\JDoodleClient.AssemblyInfo.cs
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\JDoodleClient.csproj.CoreCompileInputs.cache
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\JDoodleClient.dll
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\refint\JDoodleClient.dll
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\JDoodleClient.pdb
+C:\Users\IT\Documents\c#\JDoodleHttpClient\obj\Debug\net6.0\ref\JDoodleClient.dll
