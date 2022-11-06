@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IT\\Documents\\c#\\OnlineCompiler\\OnlineCompiler.csproj": {}
+    "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\OnlineCompiler\\OnlineCompiler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj": {
+    "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj",
+        "projectUniqueName": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj",
         "projectName": "JDoodleClient",
-        "projectPath": "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj",
+        "projectPath": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj",
         "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\obj\\",
+        "outputPath": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\IT\\Documents\\c#\\OnlineCompiler\\OnlineCompiler.csproj": {
+    "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\OnlineCompiler\\OnlineCompiler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IT\\Documents\\c#\\OnlineCompiler\\OnlineCompiler.csproj",
+        "projectUniqueName": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\OnlineCompiler\\OnlineCompiler.csproj",
         "projectName": "OnlineCompiler",
-        "projectPath": "C:\\Users\\IT\\Documents\\c#\\OnlineCompiler\\OnlineCompiler.csproj",
+        "projectPath": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\OnlineCompiler\\OnlineCompiler.csproj",
         "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IT\\Documents\\c#\\OnlineCompiler\\obj\\",
+        "outputPath": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\OnlineCompiler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,8 +96,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj": {
-                "projectPath": "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj"
+              "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj": {
+                "projectPath": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj"
               }
             }
           }
@@ -112,6 +112,16 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj": {}
+    "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj": {
+    "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj",
+        "projectUniqueName": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj",
         "projectName": "JDoodleClient",
-        "projectPath": "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\JDoodleClient.csproj",
+        "projectPath": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\JDoodleClient.csproj",
         "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IT\\Documents\\c#\\JDoodleHttpClient\\obj\\",
+        "outputPath": "C:\\Users\\IT\\Source\\Repos\\OnlineCompilerApi\\JDoodleHttpClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
