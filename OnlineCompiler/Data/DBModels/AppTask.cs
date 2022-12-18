@@ -8,11 +8,11 @@ namespace OnlineCompiler.Data.DBModels
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public Guid ResourceId { get; set; }
-        public string Description { get; set; }
+        public Guid? ResourceId { get; set; }
+        public string? Description { get; set; }
         public int AvailablePoints { get; set; }
-        public string Name { get; set; }
-        public string Answer { get; set; }
+        public string? Name { get; set; }
+        public string? Answer { get; set; }
 
         public AppTask (string description, int availablePoints, string name, string answer)
         {
@@ -21,6 +21,10 @@ namespace OnlineCompiler.Data.DBModels
             Name = name;
             ResourceId = Guid.NewGuid();
             Answer = answer;
+        }
+
+        public AppTask()
+        {
         }
     }
 }

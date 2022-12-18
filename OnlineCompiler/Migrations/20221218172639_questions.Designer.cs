@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OnlineCompiler.Data;
 
@@ -10,9 +11,10 @@ using OnlineCompiler.Data;
 namespace OnlineCompiler.Migrations
 {
     [DbContext(typeof(OnlineCompilerDbContext))]
-    partial class OnlineCompilerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221218172639_questions")]
+    partial class questions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
@@ -119,9 +121,6 @@ namespace OnlineCompiler.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("PointsFromQuestions")
-                        .HasColumnType("INTEGER");
 
                     b.Property<Guid>("ResourceId")
                         .HasColumnType("TEXT");

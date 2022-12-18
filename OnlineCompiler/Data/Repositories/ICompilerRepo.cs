@@ -6,5 +6,7 @@ namespace OnlineCompiler.Data.Repositories
     {
         public bool AddTask(AppTaskDTO task);
         public List<AppTaskDTO> GetAllTasks();
+        public AppTaskDTO GetTaskById(Guid id);
+        public bool DeleteTask(Guid id);
     }
 }

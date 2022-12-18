@@ -4,11 +4,11 @@ namespace OnlineCompiler.Models.DTO
 {
     public class AppTaskDTO
     {
-        public Guid ResourceID { get; set; }
-        public string Description { get; set; }
+        public Guid? ResourceID { get; set; }
+        public string? Description { get; set; }
         public int AvailablePoints { get; set; }
-        public string Name { get; set; }
-        public string Answer { get; set; }
+        public string? Name { get; set; }
+        public string? Answer { get; set; }
 
         public AppTaskDTO(AppTask task)
         {
@@ -24,6 +24,10 @@ namespace OnlineCompiler.Models.DTO
             AvailablePoints = contract.AvailablePoints;
             Name = contract.Name;
             Answer = contract.Answer;
+        }
+
+        public AppTaskDTO()
+        {
         }
     }
 }

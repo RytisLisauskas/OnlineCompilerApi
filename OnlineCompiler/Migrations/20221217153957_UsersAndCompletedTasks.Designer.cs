@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OnlineCompiler.Data;
 
@@ -10,31 +11,13 @@ using OnlineCompiler.Data;
 namespace OnlineCompiler.Migrations
 {
     [DbContext(typeof(OnlineCompilerDbContext))]
-    partial class OnlineCompilerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221217153957_UsersAndCompletedTasks")]
+    partial class UsersAndCompletedTasks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
-
-            modelBuilder.Entity("OnlineCompiler.Data.DBModels.Answer", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("QuestionId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("QuestionId");
-
-                    b.ToTable("Answers");
-                });
 
             modelBuilder.Entity("OnlineCompiler.Data.DBModels.AppTask", b =>
                 {
@@ -43,18 +26,21 @@ namespace OnlineCompiler.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Answer")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("AvailablePoints")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("ResourceId")
+                    b.Property<Guid>("ResourceId")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -69,15 +55,16 @@ namespace OnlineCompiler.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("PointsEarned")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid?>("ResourceId")
+                    b.Property<Guid>("ResourceId")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -85,29 +72,6 @@ namespace OnlineCompiler.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("CompletedTasks");
-                });
-
-            modelBuilder.Entity("OnlineCompiler.Data.DBModels.Question", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AvailablePoints")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CorrectAnswer")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("QuestionText")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("ResourceId")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("OnlineCompiler.Data.DBModels.User", b =>
@@ -119,9 +83,6 @@ namespace OnlineCompiler.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("PointsFromQuestions")
-                        .HasColumnType("INTEGER");
 
                     b.Property<Guid>("ResourceId")
                         .HasColumnType("TEXT");
@@ -135,27 +96,15 @@ namespace OnlineCompiler.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("OnlineCompiler.Data.DBModels.Answer", b =>
-                {
-                    b.HasOne("OnlineCompiler.Data.DBModels.Question", "Question")
-                        .WithMany("Answers")
-                        .HasForeignKey("QuestionId");
-
-                    b.Navigation("Question");
-                });
-
             modelBuilder.Entity("OnlineCompiler.Data.DBModels.CompletedTask", b =>
                 {
                     b.HasOne("OnlineCompiler.Data.DBModels.User", "User")
                         .WithMany("CompletedTasks")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("OnlineCompiler.Data.DBModels.Question", b =>
-                {
-                    b.Navigation("Answers");
                 });
 
             modelBuilder.Entity("OnlineCompiler.Data.DBModels.User", b =>
